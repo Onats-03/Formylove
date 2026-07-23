@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Flower For You ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+    font-family:'Segoe UI',sans-serif;
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+}
+
+.flower{
+    position:relative;
+    width:220px;
+    height:280px;
+    margin:auto;
+    animation:float 4s ease-in-out infinite;
+}
+
+.stem{
+    position:absolute;
+    width:10px;
+    height:160px;
+    background:#2e8b57;
+    left:50%;
+    bottom:20px;
+    transform:translateX(-50%);
+    border-radius:10px;
+}
+
+.leaf{
+    position:absolute;
+    width:50px;
+    height:25px;
+    background:#3cb371;
+    border-radius:50px 0;
+}
+
+.left{
+    left:55px;
+    bottom:110px;
+    transform:rotate(-35deg);
+}
+
+.right{
+    right:55px;
+    bottom:80px;
+    transform:scaleX(-1) rotate(-35deg);
+}
+
+.petal{
+    position:absolute;
+    width:80px;
+    height:80px;
+    background:#ff4f87;
+    border-radius:50%;
+    opacity:0;
+    animation:bloom 2s forwards;
+}
+
+.p1{left:70px;top:20px;}
+.p2{left:20px;top:60px;}
+.p3{left:120px;top:60px;}
+.p4{left:70px;top:100px;}
+.p5{left:70px;top:-20px;}
+
+.center{
+    position:absolute;
+    width:55px;
+    height:55px;
+    background:#ffd54f;
+    border-radius:50%;
+    left:83px;
+    top:63px;
+    z-index:5;
+    animation:appear 2s forwards;
+}
+
+h1{
+    color:#fff;
+    margin-top:30px;
+    font-size:2.2rem;
+    text-shadow:2px 2px 10px rgba(0,0,0,.2);
+}
+
+p{
+    color:white;
+    max-width:600px;
+    margin:20px auto;
+    font-size:18px;
+    line-height:1.7;
+    animation:fade 4s;
+}
+
+button{
+    margin-top:20px;
+    padding:14px 30px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff4f87;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+#hiddenMessage{
+    display:none;
+    margin-top:25px;
+    color:#fff;
+    font-size:22px;
+    animation:fade .8s;
+}
+
+@keyframes bloom{
+    from{
+        transform:scale(0);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes appear{
+    from{transform:scale(0);}
+    to{transform:scale(1);}
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+@keyframes fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="flower">
+    <div class="stem"></div>
+    <div class="leaf left"></div>
+    <div class="leaf right"></div>
+
+    <div class="petal p1"></div>
+    <div class="petal p2"></div>
+    <div class="petal p3"></div>
+    <div class="petal p4"></div>
+    <div class="petal p5"></div>
+
+    <div class="center"></div>
+</div>
+
+<h1>🌹 A Flower Just for You 🌹</h1>
+
+<p>
+Another month na naman sa relationship natin, Salamat sa pagmamahal mo kahit minsan hindi ako lovable minamahal mo pa rin ako
+    salamat dahil nandyan kapa din despite ng ugali ko, looking forward to our months, years, and decades of our love, Happy 23rd Monthsary of our Love, Iloveyou Always
+    muwaaahhh😍😘😘😘😘
+</p>
+
+<button onclick="showLove()">💌 Open My Heart</button>
+
+<div id="hiddenMessage">
+    ❤️ You are my favorite person, my safe place, and my forever.
+    Thank you for being the most beautiful part of my life.
+    I love you endlessly. ❤️
+</div>
+
+</div>
+
+<script>
+function showLove(){
+    document.getElementById("hiddenMessage").style.display="block";
+}
+</script>
+
+</body>
+</html>
